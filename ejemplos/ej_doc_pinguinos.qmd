@@ -1,0 +1,19 @@
+---
+title: "Demostración de geom_point"
+author: "Luis"
+format: 
+  html:
+highlight-style: breeze  
+---
+
+## Figura con `geom_point`
+
+Largo de aleta vs masa corporal
+
+```{r}
+#| warning: false 
+library(datos)
+library(ggplot2)
+ggplot(pinguinos,aes(largo_aleta_mm,masa_corporal_g))+geom_point()
+```
+
