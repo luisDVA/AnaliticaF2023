@@ -2,7 +2,13 @@
 title: "Introducción a Quarto"
 author: "Luis D. Verde Arregoitia"
 subtitle: "Talleres Mensuales<br>Analítica Fundación, Inc.<br>Abril 2023"
-format: revealjs
+title-slide-attributes:
+  data-background-image: imagenes/wei-zeng-SACcIx_Bgyc-unsplash.jpg
+  data-background-opacity: "0.8"
+format: 
+  revealjs:
+    transition: fade
+    background-transition: fade
 editor: visual
 ---
 
@@ -10,8 +16,6 @@ editor: visual
 #| include: false
 library(fontawesome)
 ```
-
-# Introducción a Quarto para preparar documentos y presentaciones {background-image="imagenes/wei-zeng-SACcIx_Bgyc-unsplash.jpg"}
 
 ## 
 
@@ -27,21 +31,17 @@ library(fontawesome)
 ::: {.column width="50%"}
 <br>
 
--   Mastozoología  
--   Macroecología  
--   Visualización de datos  
--   Limpieza y manipulación de datos  
--   Instructor de `tidyverse` y Software Carpentry  
+-   Mastozoología\
+-   Macroecología\
+-   Visualización de datos\
+-   Limpieza y manipulación de datos\
+-   Instructor de `tidyverse` y Software Carpentry\
 :::
 :::
 
-## Esta charla
+## Esta charla es para quienes:
 
-::: {style="font-size: 1.5em; text-align: center; color: red"}
-Para quienes:
-:::
-
-<br><br> Analizan/visualizan datos en `r fa("r-project")` <br> <br> Utilizan `r fa("markdown")` Markdown o RMarkdown (¡Puede que ya estén usando sintaxis de md en aplicaciones de chat!) <br><br> Quieran aprender a combinar texto, código, y más
+<br><br> - Analizan/visualizan datos en `r fa("r-project")` <br> <br> - Utilizan `r fa("markdown")` Markdown o RMarkdown (¡Puede que ya estén usando sintaxis de md en aplicaciones de chat!) <br><br> - Quieran aprender a combinar texto, código, y más
 
 ## Qué es Markdown `r fa("markdown")`
 
@@ -59,8 +59,7 @@ Para quienes:
 :::
 
 ::: {.column width="16%"}
-![](https://bookdown.org/yihui/rmarkdown/images/hex-rmarkdown.png)
-![](https://raw.githubusercontent.com/rstudio/hex-stickers/main/PNG/knitr.png)
+![](https://bookdown.org/yihui/rmarkdown/images/hex-rmarkdown.png) ![](https://raw.githubusercontent.com/rstudio/hex-stickers/main/PNG/knitr.png)
 :::
 :::
 
@@ -69,6 +68,8 @@ Para quienes:
 ::: {style="text-align: right"}
 ![](https://quarto.org/quarto.png){width="22%"}
 :::
+
+. . .
 
 -   Sistema de publicación técnica y científica de código abiero
 -   La nueva generación de rmarkdown
@@ -163,6 +164,11 @@ Versión actual (abril 2023): v1.2.475
 
 `quarto --version` en la terminal para consultar versión instalada
 
+# Trabajemos en un nuevo documento Qmd {background-color="black"}
+
+-   Desde el menu de 'Archivo' de RStudio
+-   Con cualquier programa que pueda editar texto
+
 ## Formatos para texto
 
 Ciertos caracteres se interpretan de manera especial en `r fa("markdown")` y los usamos para especificar formato <br><br>
@@ -184,6 +190,22 @@ subíndices~2~\
 `código`
 :::
 :::
+
+## Encabezados
+
+Delimitan secciones y subsecciones, se interpretan automáticamente para generar tablas de contenidos.
+
++------------------+--------------+
+| Markdown         | Resultado    |
++==================+==============+
+|      # Nivel 1   | # Nivel 1    |
++------------------+--------------+
+|     ## Nivel 2   | ## Nivel 2   |
++------------------+--------------+
+|     ### Nivel 3  | ### Nivel 3  |
++------------------+--------------+
+|     #### Nivel 4 | #### Nivel 4 |
++------------------+--------------+
 
 ## Imágenes
 
@@ -218,7 +240,7 @@ log(1000)
 
 > El resultado del código evaluado aparece en el documento de salida
 
-## Encabezados (bloque YAML)
+## Bloque YAML
 
 Preámbulo con los metadatos del documento, para especificar:
 
@@ -232,8 +254,7 @@ Preámbulo con los metadatos del documento, para especificar:
 
 -   Relativamente frágil, escribir con atención a espacios
 
-
-## Ejemplo 1: Informe pingüinos
+## Ejemplo 1: Informe pingüinos {background-color="black"}
 
 -   cambiar [apariencia](https://quarto.org/docs/output-formats/html-themes.html#overview) (`theme`)
 -   cambiar resaltado de sintaxis (`highlight style`)
@@ -244,27 +265,26 @@ Preámbulo con los metadatos del documento, para especificar:
 
 Quarto aprovecha el esquema `reveal.js` para crear presentaciones en formato HTML.
 
-- Incluye herramientas para presentar
+-   Incluye herramientas para presentar
 
-- Delimitamos diapositivas con `---` o con encabezados
+-   Delimitamos diapositivas con `---` o con encabezados
 
-
-## Ejemplo 2: Presentación mascotas Mx
+## Ejemplo 2: Presentación mascotas MX {background-color="black"}
 
 -   Revelar [gradualmente](https://quarto.org/docs/presentations/#incremental-lists) listas numeradas y viñetas
 -   Cambiar fondo de diapositivas con atributo `{background-color}`
 -   Exportar a PDF (`E` para cambiar a vista de impresión)
 
-## Publicar documentos 
+## Publicar documentos
 
-1. Crear cuenta en [Quartopub](https://quartopub.com/sign-up)
-2. Publicar desde la línea de comandos con:
+1.  Crear cuenta en [Quartopub](https://quartopub.com/sign-up)
+2.  Publicar desde la línea de comandos con:
 
 ::: {style="text-align: center"}
 `quarto publish quarto-pub mi-documento.qmd`
 :::
 
-3. Administrar documentos publicados desde el panel de control de Quartopub
+3.  Administrar documentos publicados desde el panel de control de Quartopub
 
 ## Recursos útiles
 
@@ -274,5 +294,8 @@ Quarto aprovecha el esquema `reveal.js` para crear presentaciones en formato HTM
 
 📒 Thomas Mock - [Getting Started with Quarto](https://rstudio-conf-2022.github.io/get-started-quarto/)
 
-# !Gracias!{background-image="imagenes/wei-zeng-SACcIx_Bgyc-unsplash.jpg"}
-Materiales disponibles en 
+# !Gracias! {background-image="imagenes/wei-zeng-SACcIx_Bgyc-unsplash.jpg"}
+
+::: {style="font-size: 1.3em; background-color: rgba(132, 115, 124, 0.29)"}
+Materiales disponibles en <https://github.com/luisDVA/AnaliticaF2023>
+:::

@@ -1,0 +1,4 @@
+- source: charlaLuisQuarto2023.qmd
+  quarto-pub:
+    - id: 7bc9d22e-868f-49c2-91bd-e488ac448e5e
+      url: 'https://luisdva.quarto.pub/intro-quarto'
